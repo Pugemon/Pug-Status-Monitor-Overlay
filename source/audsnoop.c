@@ -26,7 +26,7 @@ Result audsnoopDisableDspUsageMeasurement(void) {
     return serviceDispatch(&g_audsnoopSrv, 1);
 }
 
-Result audsnoopGetDspUsage(u32 *usage) {
+Result audsnoopGetDspUsage(u32* usage) {
     u32 tmp;
     Result rc = serviceDispatchOut(&g_audsnoopSrv, 6, tmp);
     if (R_SUCCEEDED(rc) && usage)
